@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{761CE2CE-05DA-4544-9E14-B5F586A24844}</ProjectGuid>
+    <ProjectGuid>{D523CD13-395E-4528-84DA-22CA91B1BC1C}</ProjectGuid>
     <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <TemplateGuid>{c9e5eea5-ca05-42a1-839b-61506e0a37df}</TemplateGuid>
     <OutputType>Library</OutputType>
@@ -99,7 +99,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Foody\Foody.csproj">
-      <Project>{B6CD8660-EACF-4C7E-85CC-B2B5B2DF3D76}</Project>
+      <Project>{188A2BCE-F2A0-4401-B75F-287500C71613}</Project>
       <Name>Foody</Name>
     </ProjectReference>
   </ItemGroup>
