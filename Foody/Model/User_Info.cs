@@ -30,7 +30,7 @@ namespace Foody.Model
 
         }
 
-        public User_Info(string id, string pw, string name, int phone int unit, string street, string suburb, string state, int postcode)
+        public User_Info(string id, string pw, string name, int phone, int unit, string street, string suburb, string state, int postcode)
         {
             U_ID = id;
             U_Password = pw;
