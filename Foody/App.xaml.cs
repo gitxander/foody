@@ -10,7 +10,8 @@ namespace Foody
         {
             InitializeComponent();
 
-            MainPage = new HomePage();
+            // MainPage = new HomePage();
+            MainPage = new NavigationPage(new RegistrationPage());
         }
 
         protected override void OnStart()
