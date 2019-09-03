@@ -2,8 +2,33 @@
 <ContentPage
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    x:Class="Foody.OrdersPage">
+    xmlns:local="clr-namespace:Foody;assembly=Foody"
+    x:Class="Foody.OrdersPage"
+    Title="Order History">
     <ContentPage.Content>
-        
+        <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+            
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="280" />
+                <RowDefinition Height="35" />
+                <RowDefinition Height="35" />
+                <RowDefinition Height="35" />
+            </Grid.RowDefinitions>
+
+            <Image Source="{local:ImageResource Foody.Resources.images.big-burger-cropped.jpg}" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Aspect="AspectFill"/>
+
+            <Label Text="02 Sept 2019" Grid.Row="2" Grid.Column="0" Margin="15, 0"/>
+            <Label Text="$395 >" Grid.Row="2" Grid.Column="1" Margin="15, 0" HorizontalTextAlignment="End"/>
+
+            <Label Text="15 Sept 2019" Grid.Row="3" Grid.Column="0" Margin="15, 0" />
+            <Label Text="$280 >" Grid.Row="3" Grid.Column="1" Margin="15, 0" HorizontalTextAlignment="End"/>
+
+            <Label Text="21 Sept 2019" Grid.Row="4" Grid.Column="0" Margin="15, 0" /> 
+            <Label Text="$469 >" Grid.Row="4" Grid.Column="1" Margin="15, 0" HorizontalTextAlignment="End"/>
+            
+        </Grid>
     </ContentPage.Content>
 </ContentPage>
