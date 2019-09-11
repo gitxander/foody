@@ -16,5 +16,10 @@ namespace Foody
         {
             InitializeComponent();
         }
+
+        void Handle_Clicked(object sender, System.EventArgs e)
+        {
+            Navigation.PushModalAsync(new RegistrationPage());
+        }
     }
 }
