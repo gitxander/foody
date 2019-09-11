@@ -14,12 +14,12 @@
             <StackLayout VerticalOptions="Center" Padding="10">
 
                 <Label Text="Email" FontSize="Large" TextColor="Black" FontAttributes="Bold" Margin="0,50,0,0"/>
-                <Entry Placeholder="Enter the Email Here!" x:Name="loing_Email"/>
+                <Entry Placeholder="Enter the Email Here!" x:Name="login_Email" Text=""/>
                 <Label Text="Password" FontSize="Large" TextColor="Black" FontAttributes="Bold"/>
-                <Entry Placeholder="Enter the Password!" IsPassword="True" x:Name="login_PW"/>
+                <Entry Placeholder="Enter the Password!" IsPassword="True" x:Name="login_PW" Text=""/>
                 <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
-                    <Button Text="Login" x:Name="bt_login" BackgroundColor="{StaticResource BG_Color}" TextColor="White " FontAttributes="Bold" Margin="10" />
-                    <Button Text="Sign Up" x:Name="bt_regi" BackgroundColor="{StaticResource BG_Color}" TextColor="White" FontAttributes="Bold" Margin="10" Clicked="Handle_Clicked"/>
+                    <Button Text="Login" x:Name="bt_login" BackgroundColor="{StaticResource BG_Color}" TextColor="White " FontAttributes="Bold" Margin="10" Clicked="Loginbtn"/>
+                    <Button Text="Sign Up" x:Name="bt_regi" BackgroundColor="{StaticResource BG_Color}" TextColor="White" FontAttributes="Bold" Margin="10" Clicked="SignUpbtn"/>
                 </StackLayout>
 
             </StackLayout>
