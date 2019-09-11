@@ -24,17 +24,14 @@
   </ItemGroup>
 
   <ItemGroup>
-<<<<<<< HEAD
     <EmbeddedResource Update="Login.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-=======
     <EmbeddedResource Include="Resources\images\big-burger.jpg" />
     <EmbeddedResource Include="Resources\images\big-burger-cropped.jpg" />
     <EmbeddedResource Include="Resources\images\bolognese-spaghetti.jpg" />
   </ItemGroup>
   <ItemGroup>
->>>>>>> c671fdaa224b9c03b58f1ce5c9bc5f52854a8eb6
     <EmbeddedResource Update="RegistrationPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
