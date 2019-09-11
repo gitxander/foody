@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
@@ -18,8 +18,8 @@
                        FontAttributes="Bold" />
                 </StackLayout>
                 <StackLayout Padding="10">
-                    <Label Text="ID :" FontAttributes="Bold" FontSize="Large" Margin="0,20,0,0"/>
-                    <Entry Placeholder="Enter Id here" x:Name="u_ID"/>
+                    <Label Text="Email :" FontAttributes="Bold" FontSize="Large" Margin="0,20,0,0"/>
+                    <Entry Placeholder="Enter E-mail here" x:Name="u_Email"/>
 
                     <Label Text="Password :" FontAttributes="Bold" FontSize="Large"/>
                     <Entry Placeholder="Enter Password" IsPassword="True" x:Name="u_PW"/>
@@ -27,8 +27,11 @@
                     <Label Text="Confirm Password :" FontAttributes="Bold" FontSize="Large"/>
                     <Entry Placeholder="Enter Password" IsPassword="True" x:Name="u_PWC"/>
 
-                    <Label Text="Name :" FontAttributes="Bold" FontSize="Large"/>
-                    <Entry Placeholder="Enter Your Full Name" x:Name="u_NAME"/>
+                    <Label Text="First Name :" FontAttributes="Bold" FontSize="Large"/>
+                    <Entry Placeholder="Enter Your Full Name" x:Name="u_FNAME"/>
+                    
+                    <Label Text="Last Name :" FontAttributes="Bold" FontSize="Large"/>
+                    <Entry Placeholder="Enter Your Full Name" x:Name="u_LNAME"/>
 
                     <Label Text="Mobile Number :" FontAttributes="Bold" FontSize="Large"/>
                     <Entry Placeholder="Enter Your Full Name" x:Name="u_PhoneNumber"/>
@@ -51,7 +54,7 @@
 
                     <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
                         <Button Text="Reset" x:Name="bt_Reset"/>
-                        <Button Text="Sign Up" x:Name="bt_SignUp"/>
+                        <Button Text="Sign Up" x:Name="bt_SignUp" Clicked="SignUpbtn"/>
                     </StackLayout>
                 </StackLayout>
             </StackLayout>

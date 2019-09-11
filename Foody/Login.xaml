@@ -13,8 +13,8 @@
 
             <StackLayout VerticalOptions="Center" Padding="10">
 
-                <Label Text="ID" FontSize="Large" TextColor="Black" FontAttributes="Bold" Margin="0,50,0,0"/>
-                <Entry Placeholder="Enter the ID Here!" x:Name="loing_ID"/>
+                <Label Text="Email" FontSize="Large" TextColor="Black" FontAttributes="Bold" Margin="0,50,0,0"/>
+                <Entry Placeholder="Enter the Email Here!" x:Name="loing_Email"/>
                 <Label Text="Password" FontSize="Large" TextColor="Black" FontAttributes="Bold"/>
                 <Entry Placeholder="Enter the Password!" IsPassword="True" x:Name="login_PW"/>
                 <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
