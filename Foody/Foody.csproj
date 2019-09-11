@@ -42,4 +42,7 @@
     <None Remove="Resources\images\big-burger-cropped.jpg" />
     <None Remove="Resources\images\bolognese-spaghetti.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Model\User_Info.cs" />
+  </ItemGroup>
 </Project>
