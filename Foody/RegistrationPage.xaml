@@ -53,7 +53,7 @@
                     <Entry Placeholder="Enter 4 digits of Post Code" x:Name="u_Postcode"/>
 
                     <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
-                        <Button Text="Reset" x:Name="bt_Reset"/>
+                        <Button Text="Reset" x:Name="bt_Reset" Clicked="Resetbtn"/>
                         <Button Text="Sign Up" x:Name="bt_SignUp" Clicked="SignUpbtn"/>
                     </StackLayout>
                 </StackLayout>

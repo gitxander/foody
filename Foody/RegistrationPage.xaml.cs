@@ -21,7 +21,7 @@ namespace Foody
 
         private async void SignUpbtn(object sender, EventArgs e)
         {
-            if(u_PW.Text != u_PWC.Text)
+            if (u_PW.Text != u_PWC.Text)
             {
                 await DisplayAlert("Failed", "Password and Confirm Password are different", "OK");
             }
@@ -49,6 +49,23 @@ namespace Foody
 
                 await Navigation.PopAsync(); //error here
             }
+
+        }
+
+        private async void Resetbtn(object sender, EventArgs e)
+        {
+            u_FNAME.Text = "";
+            u_LNAME.Text = "";
+            u_Email.Text = "";
+            u_PW.Text = "";
+            u_PWC.Text = "";
+            u_PhoneNumber.Text = "";
+            u_Unit.Text = "";
+            u_Street.Text = "";
+            u_Suburb.Text = "";
+            u_State.Text = "";
+            u_Postcode.Text = "";
+            await DisplayAlert("Success", "Page Reset", "OK");
 
         }
     }
