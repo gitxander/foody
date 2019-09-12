@@ -38,12 +38,12 @@ namespace Foody.Data
             return cartList;
         }
 
-        /* GET Cart Per Cart Id */
-        public async Task<List<Cart>> GetCartByCartIdDataAsync(Cart cart)
+        /* GET Cart By Order Id */
+        public async Task<List<Cart>> GetCartDataAsyncByOrderId(int _order_id)
         {
             try
             {
-                var response = await client.GetAsync(url + "/order/" + cart.Id);
+                var response = await client.GetAsync(url + "/order/" + _order_id);
                 if (response.IsSuccessStatusCode)
                 {
                     var content = await response.Content.ReadAsStringAsync();

@@ -8,16 +8,19 @@ namespace Foody
 {
     public partial class OrderDetailsPage : ContentPage
     {
-        public OrderDetailsPage()
+        int Order_Id;
+
+        public OrderDetailsPage(int _order_id)
         {
             InitializeComponent();
+            Order_Id = _order_id;
         }
 
         protected async override void OnAppearing()
         {
             base.OnAppearing();
             CartData cartData = new CartData();
-            ListView.ItemsSource = await cartData.GetDataAsync();
+            ListView.ItemsSource = await cartData.GetCartDataAsyncByOrderId(Order_Id);
         }
     }
 }
