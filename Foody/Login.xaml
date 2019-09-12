@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Foody.Login">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout Padding="20" BackgroundColor="{StaticResource BG_Color}" >
+                <Label Text="Login" FontAttributes="Bold" FontSize="Title" TextColor="White" />
+            </StackLayout>
+
+            <StackLayout VerticalOptions="Center" Padding="10">
+
+                <Label Text="Email" FontSize="Large" TextColor="Black" FontAttributes="Bold" Margin="0,50,0,0"/>
+                <Entry Placeholder="Enter the Email Here!" x:Name="login_Email" Text=""/>
+                <Label Text="Password" FontSize="Large" TextColor="Black" FontAttributes="Bold"/>
+                <Entry Placeholder="Enter the Password!" IsPassword="True" x:Name="login_PW" Text=""/>
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                    <Button Text="Login" x:Name="bt_login" BackgroundColor="{StaticResource BG_Color}" TextColor="White " FontAttributes="Bold" Margin="10" Clicked="Loginbtn"/>
+                    <Button Text="Sign Up" x:Name="bt_regi" BackgroundColor="{StaticResource BG_Color}" TextColor="White" FontAttributes="Bold" Margin="10" Clicked="SignUpbtn"/>
+                </StackLayout>
+
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

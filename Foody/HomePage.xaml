@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
             xmlns:foody="clr-namespace:Foody"
@@ -11,5 +11,5 @@
     <!--Pages can be added as references or inline-->
     <foody:RestaurantPage Title="Restaurant" IconImageSource="ic_action_restaurant.png"></foody:RestaurantPage>
     <foody:OrdersPage Title="Orders" IconImageSource="ic_action_orders.png"></foody:OrdersPage>
-    <foody:SettingsPage Title="Settings" IconImageSource="ic_action_settings.png"></foody:SettingsPage>
+    <foody:Login Title="Settings" IconImageSource="ic_action_settings.png"></foody:Login>
 </TabbedPage>

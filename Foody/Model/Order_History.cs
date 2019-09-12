@@ -13,7 +13,7 @@ namespace Foody.Model
         public string R_Title { get; set; }
         public string F_Title { get; set; }
         public int O_Quantity { get; set; }
-        public string  O_Time { get; set; }
+        public DateTime?  O_Time { get; set; }
         public string O_Destination { get; set; }
         public string O_DriverName { get; set; }
         public int O_DriverContactNumber { get; set; }
@@ -22,7 +22,7 @@ namespace Foody.Model
         {
 
         }
-        public Order_History(int no, int uid, string rtitle, string ftitme, int quantity, string time, string dest, string dname, int dphone)
+        public Order_History(int no, int uid, string rtitle, string ftitme, int quantity, DateTime? time, string dest, string dname, int dphone)
         {
             O_No = no;
             U_ID = uid;

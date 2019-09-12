@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Foody.RegistrationPage"
+             >
+    <ContentPage.Content>
+
+        <ScrollView>
+            <StackLayout>
+                <StackLayout BackgroundColor="{StaticResource BG_Color}"  Padding="10">
+                    <Label Text="Sign UP" 
+                       TextColor="White"  
+                       HorizontalOptions="Center" 
+                       FontSize="Title" 
+                       FontAttributes="Bold" />
+                </StackLayout>
+                <StackLayout Padding="10">
+                    <Label Text="Email :" FontAttributes="Bold" FontSize="Large" Margin="0,20,0,0"/>
+                    <Entry Placeholder="Enter E-mail here" x:Name="u_Email"/>
+
+                    <Label Text="Password :" FontAttributes="Bold" FontSize="Large"/>
+                    <Entry Placeholder="Enter Password" IsPassword="True" x:Name="u_PW"/>
+
+                    <Label Text="Confirm Password :" FontAttributes="Bold" FontSize="Large"/>
+                    <Entry Placeholder="Enter Password" IsPassword="True" x:Name="u_PWC"/>
+
+                    <Label Text="First Name :" FontAttributes="Bold" FontSize="Large"/>
+                    <Entry Placeholder="Enter Your Full Name" x:Name="u_FNAME"/>
+                    
+                    <Label Text="Last Name :" FontAttributes="Bold" FontSize="Large"/>
+                    <Entry Placeholder="Enter Your Full Name" x:Name="u_LNAME"/>
+
+                    <Label Text="Mobile Number :" FontAttributes="Bold" FontSize="Large"/>
+                    <Entry Placeholder="Enter Your Full Name" x:Name="u_PhoneNumber"/>
+
+                    <Label Text="Address " FontSize="Subtitle"/>
+                    <Label Text="Unit :" FontAttributes="Bold" FontSize="Large"/>
+                    <Entry Placeholder="Enter Unit  Number" x:Name="u_Unit"/>
+
+                    <Label Text="Street :" FontAttributes="Bold" FontSize="Large"/>
+                    <Entry Placeholder="Enter Street Name" x:Name="u_Street"/>
+
+                    <Label Text="Suburb :" FontAttributes="Bold" FontSize="Large"/>
+                    <Entry Placeholder="Enter Suburb" x:Name="u_Suburb"/>
+
+                    <Label Text="State :" FontAttributes="Bold" FontSize="Large"/>
+                    <Entry Placeholder="Enter State" x:Name="u_State"/>
+
+                    <Label Text="Post Code :" FontAttributes="Bold" FontSize="Large"/>
+                    <Entry Placeholder="Enter 4 digits of Post Code" x:Name="u_Postcode"/>
+
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                        <Button Text="Reset" x:Name="bt_Reset" Clicked="Resetbtn"/>
+                        <Button Text="Sign Up" x:Name="bt_SignUp" Clicked="SignUpbtn"/>
+                    </StackLayout>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
