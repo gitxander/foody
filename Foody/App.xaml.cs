@@ -10,8 +10,10 @@ namespace Foody
         {
             InitializeComponent();
 
-             MainPage = new HomePage();
-            //MainPage = new NavigationPage(new RegistrationPage());
+            //MainPage = new HomePage();
+
+            /* use new NavigationPage to enable Navigation.PushAsync */
+            MainPage = new NavigationPage(new HomePage());
         }
 
         protected override void OnStart()

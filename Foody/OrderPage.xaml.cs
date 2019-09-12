@@ -27,9 +27,9 @@ namespace Foody
         {
             if (e.SelectedItem != null)
             {
-                await Navigation.PushAsync(new RestaurantPage
+                await Navigation.PushAsync(new OrderDetailsPage
                 {
-                    BindingContext = e.SelectedItem as User
+                    BindingContext = e.SelectedItem as Order
                 });
             }
         }
