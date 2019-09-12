@@ -10,6 +10,6 @@
             x:Class="Foody.HomePage">
     <!--Pages can be added as references or inline-->
     <foody:RestaurantPage Title="Restaurant" IconImageSource="ic_action_restaurant.png"></foody:RestaurantPage>
-    <foody:OrdersPage Title="Orders" IconImageSource="ic_action_orders.png"></foody:OrdersPage>
+    <foody:OrderPage Title="Orders" IconImageSource="ic_action_orders.png"></foody:OrderPage>
     <foody:Login Title="Settings" IconImageSource="ic_action_settings.png"></foody:Login>
 </TabbedPage>
