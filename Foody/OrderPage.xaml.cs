@@ -27,7 +27,9 @@ namespace Foody
         {
             if (e.SelectedItem != null)
             {
-                await Navigation.PushAsync(new OrderDetailsPage(1)
+                var foo = e.SelectedItem as Order;
+                
+                await Navigation.PushAsync(new OrderDetailsPage(foo.Id)
                 {
                     BindingContext = e.SelectedItem as Order
                 });
