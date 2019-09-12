@@ -12,5 +12,12 @@ namespace Foody
         {
             InitializeComponent();
         }
+
+        protected async override void OnAppearing()
+        {
+            base.OnAppearing();
+            CartData cartData = new CartData();
+            ListView.ItemsSource = await cartData.GetDataAsync();
+        }
     }
 }

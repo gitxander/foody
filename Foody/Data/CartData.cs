@@ -13,13 +13,13 @@ namespace Foody.Data
     public class CartData
     {
         HttpClient client = new HttpClient();
-        List<Order> cartList = null;
+        List<Cart> cartList = null;
 
         /* LINK FROM AWS EC2 INSTANCE */
         string url = "http://3.91.188.122/cart";
 
         /* GET Cart LIST (ALL) */
-        public async Task<List<Order>> GetDataAsync()
+        public async Task<List<Cart>> GetDataAsync()
         {
             try
             {
@@ -27,7 +27,7 @@ namespace Foody.Data
                 if (response.IsSuccessStatusCode)
                 {
                     var content = await response.Content.ReadAsStringAsync();
-                    cartList = JsonConvert.DeserializeObject<List<Order>>(content);
+                    cartList = JsonConvert.DeserializeObject<List<Cart>>(content);
                 }
             }
             catch (Exception ex)
@@ -38,16 +38,16 @@ namespace Foody.Data
             return cartList;
         }
 
-        /* GET Cart Per Order Id */
-        public async Task<List<Order>> GetCartByOrderIdDataAsync(Cart cart)
+        /* GET Cart Per Cart Id */
+        public async Task<List<Cart>> GetCartByCartIdDataAsync(Cart cart)
         {
             try
             {
-                var response = await client.GetAsync(url + "/order/" + cart.Order_Id);
+                var response = await client.GetAsync(url + "/order/" + cart.Id);
                 if (response.IsSuccessStatusCode)
                 {
                     var content = await response.Content.ReadAsStringAsync();
-                    cartList = JsonConvert.DeserializeObject<List<Order>>(content);
+                    cartList = JsonConvert.DeserializeObject<List<Cart>>(content);
                 }
             }
             catch (Exception ex)
@@ -59,7 +59,7 @@ namespace Foody.Data
         }
 
         /* GET Cart Per User Id */
-        public async Task<List<Order>> GetCartByUserdDataAsync(Cart cart)
+        public async Task<List<Cart>> GetCartByUserdDataAsync(Cart cart)
         {
             try
             {
@@ -67,7 +67,7 @@ namespace Foody.Data
                 if (response.IsSuccessStatusCode)
                 {
                     var content = await response.Content.ReadAsStringAsync();
-                    cartList = JsonConvert.DeserializeObject<List<Order>>(content);
+                    cartList = JsonConvert.DeserializeObject<List<Cart>>(content);
                 }
             }
             catch (Exception ex)
@@ -79,7 +79,7 @@ namespace Foody.Data
         }
 
         /* ADD/EDIT CART */
-        public async Task<List<Order>> PostDataAsync(Cart cart)
+        public async Task<List<Cart>> PostDataAsync(Cart cart)
         {
             var json = JsonConvert.SerializeObject(cart);
             var data = new StringContent(json, Encoding.UTF8, "application/json");
@@ -92,7 +92,7 @@ namespace Foody.Data
                 if (response.IsSuccessStatusCode)
                 {
                     var content = await response.Content.ReadAsStringAsync();
-                    cartList = JsonConvert.DeserializeObject<List<Order>>(content);
+                    cartList = JsonConvert.DeserializeObject<List<Cart>>(content);
                 }
             }
             catch (Exception ex)
@@ -105,7 +105,7 @@ namespace Foody.Data
         }
 
         /* DELETE Cart */
-        public async Task<List<Order>> DeleteDataAsync(Cart cart)
+        public async Task<List<Cart>> DeleteDataAsync(Cart cart)
         {
             HttpClient client1 = new HttpClient();
 
@@ -117,7 +117,7 @@ namespace Foody.Data
                 if (response.IsSuccessStatusCode)
                 {
                     var content = await response.Content.ReadAsStringAsync();
-                    cartList = JsonConvert.DeserializeObject<List<Order>>(content);
+                    cartList = JsonConvert.DeserializeObject<List<Cart>>(content);
                 }
             }
             catch (Exception ex)
