@@ -20,8 +20,12 @@
     <Folder Include="Data\" />
     <Folder Include="ViewModel\" />
     <Folder Include="View\" />
+<<<<<<< HEAD
     <Folder Include="Resources\" />
     <Folder Include="Resources\images\" />
+=======
+    <Folder Include="Data\" />
+>>>>>>> restaurant-page
   </ItemGroup>
 
   <ItemGroup>

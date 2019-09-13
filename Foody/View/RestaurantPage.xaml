@@ -2,8 +2,30 @@
 <ContentPage
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    x:Class="Foody.RestaurantPage">
+    x:Class="Foody.RestaurantPage"
+    xmlns:local="clr-namespace:Foody.ViewModel">
     <ContentPage.Content>
-        
+        <StackLayout Orientation="Vertical">   
+        <StackLayout.BindingContext>
+            <local:RestaurantPageViewModel/>
+        </StackLayout.BindingContext>
+        <CollectionView x:Name="RestaurantsView" ItemsSource= "{Binding RestaurantsList}">
+        <CollectionView.ItemTemplate>
+            <DataTemplate>
+                <Grid Padding="10">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Image Grid.Row="0" Source="{Binding R_BgImg}" Aspect="AspectFill"/>
+                    <Label Grid.Row="1" Text="{Binding R_Title}" FontAttributes="Bold"></Label>
+                </Grid>                       
+            </DataTemplate>
+        </CollectionView.ItemTemplate>
+        </CollectionView>
+        </StackLayout>   
     </ContentPage.Content>
 </ContentPage>

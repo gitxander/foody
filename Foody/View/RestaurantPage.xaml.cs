@@ -9,6 +9,7 @@ namespace Foody
     {
         public RestaurantPage()
         {
+            
             InitializeComponent();
         }
     }
