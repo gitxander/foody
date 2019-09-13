@@ -10,13 +10,9 @@ namespace Foody
         {
             InitializeComponent();
 
-<<<<<<< HEAD
             //MainPage = new HomePage();
 
             /* use new NavigationPage to enable Navigation.PushAsync */
-=======
-            // MainPage = new HomePage();
->>>>>>> restaurant-page
             MainPage = new NavigationPage(new HomePage());
         }
 
