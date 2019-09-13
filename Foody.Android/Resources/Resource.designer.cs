@@ -6448,10 +6448,13 @@ namespace Foody.Droid
 			public const int notify_panel_notification_icon_bg = 2131165499;
 			
 			// aapt resource value: 0x7F07013C
-			public const int tooltip_frame_dark = 2131165500;
+			public const int r1_bg = 2131165500;
 			
 			// aapt resource value: 0x7F07013D
-			public const int tooltip_frame_light = 2131165501;
+			public const int tooltip_frame_dark = 2131165501;
+			
+			// aapt resource value: 0x7F07013E
+			public const int tooltip_frame_light = 2131165502;
 			
 			static Drawable()
 			{

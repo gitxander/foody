@@ -7,10 +7,11 @@ namespace Foody.Model
 {
     public class Restaurants
     {
-        [PrimaryKey]
+        [PrimaryKey,AutoIncrement]
         public int R_ID { get; set; } //Restaurants ID
         public string R_Title { get; set; }
-        public string R_Description { get; set; } 
+        public string R_Description { get; set; }
+        public string R_BgImg { get; set; }
         
         //address
         public int R_Unit { get; set; }
