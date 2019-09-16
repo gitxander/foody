@@ -35,5 +35,22 @@ namespace Foody
                 });
             }
         }
+
+        /* RANDOMLY ADD FOOD TO CART - SHOULD BE MOVED TO RESTAURANTS PAGE  */
+        async void AddFoodToCart(object sender, EventArgs e)
+        {
+   
+                Cart random = new Cart();
+                random.Food_Id = 2;
+                random.User_Id = 1;
+                random.Quantity = 3;
+
+                CartData cartData = new CartData();
+
+                await cartData.PostDataAsync(random);
+
+                await DisplayAlert("Success", "Your data has been added", "OK");
+        }
+
     }
 }
