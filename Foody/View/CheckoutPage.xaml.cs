@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using Foody.Data;
+using Foody.Model;
 using Xamarin.Forms;
 
 namespace Foody
@@ -15,8 +16,13 @@ namespace Foody
         /* PROCEED TO CHECKOUT CART */
         async void ProceedToCheckout(object sender, EventArgs e)
         {
+            Order order = new Order();
+            order.User_Id = 1;
 
-            await Navigation.PushAsync(new CartPage()
+            OrderData orderData = new OrderData();
+            await orderData.PutDataAsync(order);
+
+            await Navigation.PushAsync(new SuccessPage()
             {
 
             });
