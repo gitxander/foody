@@ -21,5 +21,15 @@ namespace Foody
             CartData cartData = new CartData();
             ListView.ItemsSource = await cartData.GetCartDataAsyncByUserId(User_Id, Checkout);
         }
+
+        /* CHECKOUT CART */
+        async void CheckoutCart(object sender, EventArgs e)
+        {
+
+            await Navigation.PushAsync(new CheckoutPage()
+            {
+
+            });
+        }
     }
 }
