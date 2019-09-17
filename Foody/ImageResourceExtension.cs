@@ -6,7 +6,7 @@ using System.Reflection;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace Foody
+namespace Foody.ViewModel
 {
     [ContentProperty(nameof(Source))]
     public class ImageResourceExtension : IMarkupExtension
