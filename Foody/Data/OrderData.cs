@@ -18,12 +18,32 @@ namespace Foody.Data
         /* LINK FROM AWS EC2 INSTANCE */
         string url = "http://3.91.188.122/order";
 
-        /* GET Order LIST */
+        /* GET ALL Order LIST */
         public async Task<List<Order>> GetDataAsync()
         {
             try
             {
                 var response = await client.GetAsync(url);
+                if (response.IsSuccessStatusCode)
+                {
+                    var content = await response.Content.ReadAsStringAsync();
+                    orderList = JsonConvert.DeserializeObject<List<Order>>(content);
+                }
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine(@"Error {0}", ex.Message);
+            }
+
+            return orderList;
+        }
+
+        /* GET ALL Order LIST BY USER ID */
+        public async Task<List<Order>> GetDataByUserIdAsync(int User_Id, int Checkout)
+        {
+            try
+            {
+                var response = await client.GetAsync(url + "/user/" + User_Id + "?checkout=" + Checkout);
                 if (response.IsSuccessStatusCode)
                 {
                     var content = await response.Content.ReadAsStringAsync();
