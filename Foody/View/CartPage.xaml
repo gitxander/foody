@@ -17,7 +17,7 @@
             <ListView x:Name="ListView" ItemsSource="{Binding CartList}">
                 <ListView.ItemTemplate>
                     <DataTemplate>
-                        <TextCell Text="{Binding Name}" TextColor="Black" Detail="{Binding Price}" />
+                        <TextCell Text="{Binding Name}" TextColor="Black" Detail="{Binding Total}" />
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
