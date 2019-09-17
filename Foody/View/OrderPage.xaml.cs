@@ -52,5 +52,16 @@ namespace Foody
                 await DisplayAlert("Success", "Your data has been added", "OK");
         }
 
+        /* VIEW CART  */
+        async void ViewCart(object sender, EventArgs e)
+        {
+
+            await Navigation.PushAsync(new CartPage()
+            {
+
+            });
+        }
+
+
     }
 }
