@@ -2,20 +2,40 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:Foody.ViewModel"
              x:Class="Foody.OrderPage">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="o" Clicked="ViewCart" />
+    </ContentPage.ToolbarItems>
+
     <ContentPage.Content>
+
         <StackLayout>
 
-            <StackLayout.BindingContext>
-                <local:OrderViewModel/>
-            </StackLayout.BindingContext>
-            
-            <ListView x:Name="ListView" ItemsSource="{Binding OrderList}" ItemSelected="OnListViewItemSelected">
-                <ListView.ItemTemplate>
+            <!--<Image Source="{local:ImageResource Foody.Resources.images.big-burger-cropped.jpg}" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Aspect="AspectFill"/>-->
+
+            <CollectionView x:Name="ListView" ItemsSource= "{Binding OrderList}" SelectionMode="Single" SelectionChanged="OnListViewItemSelected">
+
+                <CollectionView.ItemTemplate>
+
                     <DataTemplate>
-                        <TextCell Text="{Binding Datetime}" TextColor="Black" Detail="{Binding Total}" />
+
+                        <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                            
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="2*" />
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="10" />
+                            </Grid.RowDefinitions>
+
+                            <Label Text="{Binding Datetime,StringFormat='{0:dd MMM yyyy}'}" Grid.Row="2" Grid.Column="0" Margin="15, 0"/>
+                            <Label Text="{Binding Total, StringFormat='${0} >'}" Grid.Row="2" Grid.Column="1" Margin="15, 0" HorizontalTextAlignment="End"/>
+                            
+                        </Grid>                     
                     </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
         </StackLayout>
 
     </ContentPage.Content>

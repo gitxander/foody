@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Foody.ViewModel"
+             x:Class="Foody.CartPage">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text=">" Clicked="CheckoutCart" />
+    </ContentPage.ToolbarItems>
+
+    <ContentPage.Content>
+        <StackLayout>
+
+            <StackLayout.BindingContext>
+                <local:CartViewModel/>
+            </StackLayout.BindingContext>
+
+            <!--<Image Source="{local:ImageResource Foody.Resources.images.big-burger-cropped.jpg}" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Aspect="AspectFill"/>-->
+
+            <CollectionView x:Name="ListView" ItemsSource= "{Binding CartList}">
+
+                <CollectionView.ItemTemplate>
+
+                    <DataTemplate>
+
+                        <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                            
+                            <Grid.ColumnDefinitions>
+                                
+                                <ColumnDefinition Width="2*" />
+                                <ColumnDefinition Width="*" />
+                        
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*" />
+                            </Grid.RowDefinitions>
+
+                            <Label Margin="15,0" Grid.Row="0" Grid.Column="0" Text="{Binding Image}"  Grid.RowSpan="2"/>
+                            <Label Margin="15,0" Grid.Row="0" Grid.Column="1" Text="{Binding Name}" HorizontalOptions="Start"  Grid.ColumnSpan="3"/>
+                            
+                            <Label Margin="15,0" Grid.Row="0" Grid.Column="4" Text="{Binding Total, StringFormat='${0}'}" HorizontalOptions="End" HorizontalTextAlignment="End" Grid.RowSpan="2"/>
+
+                            <Button Grid.Row="1" Grid.Column="1" Text="-" CommandParameter="{Binding Food_Id}" Clicked="DecreaseItem" HorizontalOptions="Start"/>
+                            <Label Margin="15,0" Grid.Row="1" Grid.Column="2" Text="{Binding Quantity}" HorizontalOptions="Start"  />
+                            <Button Grid.Row="1" Grid.Column="3" Text="+" CommandParameter="{Binding Food_Id}" Clicked="IncreaseItem" HorizontalOptions="Start"/>
+                            
+                        </Grid>                     
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
+        </StackLayout>
+
+    </ContentPage.Content>
+
+</ContentPage>

@@ -34,6 +34,11 @@
     <EmbeddedResource Include="Resources\images\big-burger.jpg" />
     <EmbeddedResource Include="Resources\images\big-burger-cropped.jpg" />
     <EmbeddedResource Include="Resources\images\bolognese-spaghetti.jpg" />
+    <EmbeddedResource Include="Resources\images\grilled-salmon.jpg" />
+    <EmbeddedResource Include="Resources\images\lemon-chicken.jpg" />
+    <EmbeddedResource Include="Resources\images\meatballs-spaghetti.jpg" />
+    <EmbeddedResource Include="Resources\images\pepperoni-pizza.jpg" />
+    <EmbeddedResource Include="Resources\images\strawberry-icecream.jpg" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Update="RegistrationPage.xaml">
@@ -44,6 +49,11 @@
     <None Remove="Resources\images\big-burger.jpg" />
     <None Remove="Resources\images\big-burger-cropped.jpg" />
     <None Remove="Resources\images\bolognese-spaghetti.jpg" />
+    <None Remove="Resources\images\grilled-salmon.jpg" />
+    <None Remove="Resources\images\lemon-chicken.jpg" />
+    <None Remove="Resources\images\meatballs-spaghetti.jpg" />
+    <None Remove="Resources\images\pepperoni-pizza.jpg" />
+    <None Remove="Resources\images\strawberry-icecream.jpg" />
   </ItemGroup>
   <ItemGroup>
     <Compile Remove="Model\User_Info.cs" />

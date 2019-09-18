@@ -4,6 +4,7 @@ using Foody.Model;
 using Foody.Data;
 
 using Xamarin.Forms;
+using System.Linq;
 
 namespace Foody
 {
@@ -17,23 +18,34 @@ namespace Foody
         /* TRIGGER AFTER ADD/UPDATE/DELETE DATA. REFRESH TABLE ROW */
         protected async override void OnAppearing()
         {
+			int User_Id = 1;
+			int Checkout = 1;
             base.OnAppearing();
             OrderData orderData = new OrderData();
-            ListView.ItemsSource = await orderData.GetDataAsync();
+            ListView.ItemsSource = await orderData.GetDataByUserIdAsync(User_Id, Checkout);
         }
 
         /* TRIGGER WHEN AN ITEM IS SELECTED FROM TABLE ROW */
-        async void OnListViewItemSelected(object sender, SelectedItemChangedEventArgs e)
+        async void OnListViewItemSelected(object sender, SelectionChangedEventArgs e)
         {
-            if (e.SelectedItem != null)
-            {
-                var foo = e.SelectedItem as Order;
+            var foo = e.CurrentSelection.FirstOrDefault() as Order;
                 
-                await Navigation.PushAsync(new OrderDetailsPage(foo.Id)
-                {
-                    BindingContext = e.SelectedItem as Order
-                });
-            }
+            await Navigation.PushAsync(new OrderDetailsPage(foo.Id)
+            {
+                BindingContext = e.CurrentSelection.FirstOrDefault() as Order
+            });
         }
+
+        /* VIEW CART  */
+        async void ViewCart(object sender, EventArgs e)
+        {
+
+            await Navigation.PushAsync(new CartPage()
+            {
+
+            });
+        }
+
+
     }
 }

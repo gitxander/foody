@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Foody.ViewModel"
+             x:Class="Foody.CheckoutPage">
+
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <StackLayout BackgroundColor="{StaticResource BG_Color}"  Padding="10">
+                    <Label Text="Check Out" 
+                       TextColor="White"  
+                       HorizontalOptions="Center" 
+                       FontSize="Title" 
+                       FontAttributes="Bold" />
+                </StackLayout>
+                <StackLayout Padding="10">
+                    <Label Text="Card no :" FontAttributes="Bold" FontSize="Large" Margin="0,20,0,0"/>
+                    <Entry Placeholder="Enter card no" x:Name="u_Email"/>
+
+                    <Label Text="name on card :" FontAttributes="Bold" FontSize="Large"/>
+                    <Entry Placeholder="Enter name" IsPassword="True" x:Name="u_PW"/>
+
+                    <Label Text="expiry :" FontAttributes="Bold" FontSize="Large"/>
+                    <Entry Placeholder="mm/dd" IsPassword="True" x:Name="u_PWC"/>
+
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                        <!--<Button Text="Reset" x:Name="bt_Reset" Clicked="Resetbtn"/>-->
+                        <Button Text="Checkout" x:Name="bt_CheckOut" Clicked="ProceedToCheckout"/>
+                    </StackLayout>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+
+    </ContentPage.Content>
+</ContentPage>
