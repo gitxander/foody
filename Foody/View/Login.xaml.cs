@@ -58,12 +58,15 @@ namespace Foody
                 foreach(User x in data)
                 {
                     validation += x.Id;
+                    
                 }
 
                 if (!String.IsNullOrWhiteSpace(validation))
                 {
                   
                     App.isloggedin = true;
+                    App.User_Id = Int32.Parse(validation);
+
                     await DisplayAlert("Success", "Login Success", "OK");
 
                     await Navigation.PushAsync(new HomePage());

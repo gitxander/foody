@@ -37,6 +37,24 @@ namespace Foody.Data
 
             return usersList;
         }
+        public async Task<List<User>> GetUserDataByIdAsync(int userId)
+        {
+            try
+            {
+                var response = await client.GetAsync(url+"/"+userId);
+                if (response.IsSuccessStatusCode)
+                {
+                    var content = await response.Content.ReadAsStringAsync();
+                    usersList = JsonConvert.DeserializeObject<List<User>>(content);
+                }
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine(@"Error {0}", ex.Message);
+            }
+
+            return usersList;
+        }
 
         /* ADD NEW USER */
         public async Task<List<User>> PostDataAsync(User user)
