@@ -18,7 +18,25 @@ namespace Foody
     {
         public Login()
         {
+
+           
             InitializeComponent();
+
+
+        }
+
+        protected async override void OnAppearing()
+        {
+            base.OnAppearing();
+
+            if (App.isloggedin)
+            {
+            
+                await Navigation.PushAsync(new UserDetailPage());
+
+            }
+
+
         }
 
         public async void Loginbtn(object sender, System.EventArgs e)
@@ -39,14 +57,16 @@ namespace Foody
                 string validation = "";
                 foreach(User x in data)
                 {
-                    validation += x.First_Name;
+                    validation += x.Id;
                 }
 
                 if (!String.IsNullOrWhiteSpace(validation))
                 {
+                  
+                    App.isloggedin = true;
                     await DisplayAlert("Success", "Login Success", "OK");
 
-                    await Navigation.PushModalAsync(new HomePage());
+                    await Navigation.PushAsync(new HomePage());
                 }
                 else
                 {
