@@ -34,7 +34,7 @@
                                 <RowDefinition Height="*" />
                             </Grid.RowDefinitions>
 
-                            <Label Margin="15,0" Grid.Row="0" Grid.Column="0" Text="{Binding Image}"  Grid.RowSpan="2"/>
+                            <Image Margin="15,0" Grid.Row="0" Grid.Column="0" Source="{Binding Image}"  Grid.RowSpan="2" Aspect="AspectFill"/>
                             <Label Margin="15,0" Grid.Row="0" Grid.Column="1" Text="{Binding Name}" HorizontalOptions="Start"  Grid.ColumnSpan="3"/>
                             
                             <Label Margin="15,0" Grid.Row="0" Grid.Column="4" Text="{Binding Total, StringFormat='${0}'}" HorizontalOptions="End" HorizontalTextAlignment="End" Grid.RowSpan="2"/>
