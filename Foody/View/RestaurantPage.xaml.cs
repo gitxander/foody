@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Linq;
 using System.Collections.Generic;
+using Foody.View;
 using Foody.Data;
 using Foody.Model;
 using Xamarin.Forms;
@@ -28,6 +30,13 @@ namespace Foody
             await cartData.PostDataAsync(cart);
 
             await DisplayAlert("Success", "Your data has been added", "OK");
+        }
+
+        /* TRIGGER WHEN AN ITEM IS SELECTED FROM TABLE ROW */
+        async void OnListViewItemSelected(object sender, SelectionChangedEventArgs e)
+        {
+            var restaurant = e.CurrentSelection.FirstOrDefault() as Restaurants;
+            await Navigation.PushAsync(new FoodDetailsPage(restaurant.R_ID));
         }
     }
 }

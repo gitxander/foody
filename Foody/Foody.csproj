@@ -58,5 +58,6 @@
   <ItemGroup>
     <Compile Remove="Model\User_Info.cs" />
     <Compile Remove="OrdersPage.xaml.cs" />
+    <Compile Remove="View\FoodDetailsPage.cs" />
   </ItemGroup>
 </Project>
