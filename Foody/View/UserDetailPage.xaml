@@ -3,7 +3,12 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
              xmlns:local="clr-namespace:Foody.ViewModel"
              x:Class="Foody.UserDetailPage">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Log Out" Clicked="LogOut" />
+    </ContentPage.ToolbarItems>
+    
     <ContentPage.Content>
+        
  
          <ScrollView>
             <StackLayout>

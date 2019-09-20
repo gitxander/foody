@@ -107,6 +107,30 @@ namespace Foody.Data
 
         }
 
+        public async Task<List<User>> PostCheckEmailDataAsync(User user)
+        {
+            var json = JsonConvert.SerializeObject(user);
+            var data = new StringContent(json, Encoding.UTF8, "application/json");
+
+            HttpClient client1 = new HttpClient();
+
+            try
+            {
+                HttpResponseMessage response = await client1.PostAsync(url + "/email", data);
+                if (response.IsSuccessStatusCode)
+                {
+                    var content = await response.Content.ReadAsStringAsync();
+                    usersList = JsonConvert.DeserializeObject<List<User>>(content);
+                }
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine(@"Error {0}", ex.Message);
+            }
+
+            return usersList;
+
+        }
 
 
         /* EDIT USER INFO */

@@ -21,33 +21,60 @@ namespace Foody
 
         private async void SignUpbtn(object sender, EventArgs e)
         {
-            if (u_PW.Text != u_PWC.Text)
+            User userEmailCheck = new User();
+
+
+            userEmailCheck.Email = u_Email.Text;
+
+
+
+
+
+            UserData userDataC = new UserData();
+            var data = await userDataC.PostCheckEmailDataAsync(userEmailCheck);
+            string validation = "";
+          
+            foreach (User x in data)
             {
-                await DisplayAlert("Failed", "Password and Confirm Password are different", "OK");
+                validation += x.Email;
+
+            }
+
+            if (!String.IsNullOrWhiteSpace(validation))
+            {
+                await DisplayAlert("Fail", u_Email.Text +" is already used", "OK");
             }
             else
             {
-                User user = new User();
 
-                user.First_Name = u_FNAME.Text;
-                user.Last_Name = u_LNAME.Text;
-                user.Email = u_Email.Text;
-                user.Password = u_PW.Text;
-                user.Phone = u_PhoneNumber.Text;
-                user.Unit = u_Unit.Text;
-                user.Street = u_Street.Text;
-                user.Suburb = u_Suburb.Text;
-                user.State = u_State.Text;
-                user.Postcode = u_Postcode.Text;
+                if (u_PW.Text != u_PWC.Text)
+                {
+                    await DisplayAlert("Failed", "Password and Confirm Password are different", "OK");
+                }
+                else
+                {
+                    User user = new User();
+
+                    user.First_Name = u_FNAME.Text;
+                    user.Last_Name = u_LNAME.Text;
+                    user.Email = u_Email.Text;
+                    user.Password = u_PW.Text;
+                    user.Phone = u_PhoneNumber.Text;
+                    user.Unit = u_Unit.Text;
+                    user.Street = u_Street.Text;
+                    user.Suburb = u_Suburb.Text;
+                    user.State = u_State.Text;
+                    user.Postcode = u_Postcode.Text;
 
 
 
-                UserData userData = new UserData();
-                var data = await userData.PostDataAsync(user);
+                    UserData userData = new UserData();
+                    var data2 = await userData.PostDataAsync(user);
 
-                await DisplayAlert("Success", "Your data has been added", "OK");
+                    await DisplayAlert("Success", "Your data has been added", "OK");
 
-                await Navigation.PopAsync(); //error here
+                    await Navigation.PopModalAsync ();
+                }
             }
 
         }
