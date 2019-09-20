@@ -9,9 +9,11 @@
 
     <ContentPage.Content>
 
+        <ScrollView>
         <StackLayout>
+            
 
-            <!--<Image Source="{local:ImageResource Foody.Resources.images.big-burger-cropped.jpg}" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Aspect="AspectFill"/>-->
+            <Image Source="{local:ImageResource Foody.Resources.images.big-burger-cropped.jpg}" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Aspect="AspectFill"/>
 
             <CollectionView x:Name="ListView" ItemsSource= "{Binding OrderList}" SelectionMode="Single" SelectionChanged="OnListViewItemSelected">
 
@@ -37,6 +39,7 @@
             </CollectionView>
 
         </StackLayout>
+            </ScrollView>
 
     </ContentPage.Content>
 </ContentPage>
