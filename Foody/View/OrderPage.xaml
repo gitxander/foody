@@ -4,7 +4,7 @@
              x:Class="Foody.OrderPage">
 
     <ContentPage.ToolbarItems>
-        <ToolbarItem Text="o" Clicked="ViewCart" />
+        <ToolbarItem Name="Cart" Icon="cart.png" Priority="0" Order="Primary" Clicked="ViewCart" />
     </ContentPage.ToolbarItems>
 
     <ContentPage.Content>
