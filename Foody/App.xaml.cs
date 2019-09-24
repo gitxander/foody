@@ -6,9 +6,14 @@ namespace Foody
 {
     public partial class App : Application
     {
+        public static bool isloggedin { get; set; }
+        public static int User_Id { get; set; }
+
         public App()
         {
             InitializeComponent();
+            isloggedin = false;
+
 
             //MainPage = new HomePage();
 
