@@ -4,7 +4,7 @@
              x:Class="Foody.CartPage">
 
     <ContentPage.ToolbarItems>
-        <ToolbarItem Text=">" Clicked="CheckoutCart" />
+        <ToolbarItem Name="Checkout" Icon="checkout.png" Priority="0" Order="Primary" Clicked="CheckoutCart" />
     </ContentPage.ToolbarItems>
 
     <ContentPage.Content>
