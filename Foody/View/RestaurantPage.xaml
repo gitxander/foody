@@ -1,18 +1,15 @@
-﻿<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <ContentPage
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     x:Class="Foody.RestaurantPage"
     xmlns:local="clr-namespace:Foody.ViewModel">
-    <ContentPage.ToolbarItems>
-        <ToolbarItem Text="+" Clicked="AddFoodToCart" />
-    </ContentPage.ToolbarItems>
     <ContentPage.Content>
         <StackLayout Orientation="Vertical">   
         <StackLayout.BindingContext>
             <local:RestaurantPageViewModel/>
         </StackLayout.BindingContext>
-        <CollectionView x:Name="RestaurantsView" ItemsSource= "{Binding RestaurantsList}">
+        <CollectionView x:Name="RestaurantsView" ItemsSource= "{Binding RestaurantsList}" SelectionMode="Single" SelectionChanged="OnListViewItemSelected">
         <CollectionView.ItemTemplate>
             <DataTemplate>
                 <Grid Padding="10">
