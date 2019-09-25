@@ -54,5 +54,15 @@ namespace Foody.View
             FoodDetailsData foodData = new FoodDetailsData();
             FoodDetailsView.ItemsSource = await foodData.GetDataByRestaurantIdAsync(FoodDetailsViewModel.restaurantID);
         }
+
+        /* VIEW CART  */
+        async void ViewCart(object sender, EventArgs e)
+        {
+
+            await Navigation.PushAsync(new CartPage()
+            {
+
+            });
+        }
     }
 }

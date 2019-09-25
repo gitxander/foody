@@ -38,5 +38,15 @@ namespace Foody
             var restaurant = e.CurrentSelection.FirstOrDefault() as Restaurants;
             await Navigation.PushAsync(new FoodDetailsPage(restaurant.R_ID));
         }
+
+        /* VIEW CART  */
+        async void ViewCart(object sender, EventArgs e)
+        {
+
+            await Navigation.PushAsync(new CartPage()
+            {
+
+            });
+        }
     }
 }

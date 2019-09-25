@@ -4,6 +4,9 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
     x:Class="Foody.View.FoodDetailsPage"
     xmlns:local="clr-namespace:Foody.ViewModel">
+     <ContentPage.ToolbarItems>
+        <ToolbarItem Name="Cart" Text="Orders" Icon="cart.png" Priority="0" Order="Primary" Clicked="ViewCart" />
+    </ContentPage.ToolbarItems>
     <ContentPage.Content>
         <StackLayout Orientation="Vertical">
         <StackLayout.BindingContext>
@@ -28,7 +31,7 @@
                         <Label Grid.Row="1" Grid.Column="1" Text="$"></Label>    
                         <Label Grid.Row="1" Grid.Column="1" Text="{Binding Price}" HorizontalTextAlignment="Center"></Label>
                         <Label Grid.Row="2" Grid.Column="0" Text="{Binding Description}"></Label>
-                        <Button Grid.Row="2" Grid.Column="2" Text="+"></Button>
+                        <Button Grid.Row="2" Grid.Column="2" Text="+" IsEnabled="false"></Button>
                     </Grid>                            
                  </DataTemplate>
             </CollectionView.ItemTemplate>
