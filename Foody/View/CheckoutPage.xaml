@@ -11,10 +11,10 @@
                     <Entry Placeholder="Enter card no" x:Name="u_Email"/>
 
                     <Label Text="name on card :" FontAttributes="Bold" FontSize="Large"/>
-                    <Entry Placeholder="Enter name" IsPassword="True" x:Name="u_PW"/>
+                    <Entry Placeholder="Enter name" x:Name="u_PW"/>
 
                     <Label Text="expiry :" FontAttributes="Bold" FontSize="Large"/>
-                    <Entry Placeholder="mm/dd" IsPassword="True" x:Name="u_PWC"/>
+                    <Entry Placeholder="mm/dd" x:Name="u_PWC"/>
 
                     <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
                         <!--<Button Text="Reset" x:Name="bt_Reset" Clicked="Resetbtn"/>-->
