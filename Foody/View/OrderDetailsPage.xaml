@@ -9,13 +9,40 @@
                 <local:OrderDetailsViewModel/>
             </StackLayout.BindingContext>
             
-            <ListView x:Name="ListView" ItemsSource="{Binding CartList}">
-                <ListView.ItemTemplate>
+           <CollectionView x:Name="ListView" ItemsSource= "{Binding CartList}">
+
+                <CollectionView.ItemTemplate>
+
                     <DataTemplate>
-                        <TextCell Text="{Binding Datetime}" TextColor="Black" Detail="{Binding Total}" />
+
+                        <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                            
+                            <Grid.ColumnDefinitions>
+                                
+                                <ColumnDefinition Width="2*" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                               
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="100" />
+                                <RowDefinition Height="20" />
+                            </Grid.RowDefinitions>
+
+                            <!-- MARGIN = LEFT, TOP, RIGHT, BOTTOM -->
+
+                            <Image Margin="5" Grid.Row="0" Grid.Column="0" Source="{Binding Image}"  Aspect="AspectFill" Grid.RowSpan="2"/>
+                            <Label Margin="0" Grid.Row="0" Grid.Column="1" Text="{Binding Name}" HorizontalOptions="Start"  Font="Bold,16"/>
+                            
+                            <Label Margin="0,2,5,0" Grid.Row="0" Grid.Column="2" Text="{Binding Total, StringFormat='${0}'}" HorizontalOptions="End" HorizontalTextAlignment="End"/>
+                            
+                            <Label Margin="0" Grid.Row="1" Grid.Column="1" Text="{Binding Quantity, StringFormat='Qty: {0}'}" HorizontalOptions="StartAndExpand" VerticalOptions="StartAndExpand" Grid.ColumnSpan="2" />
+                            
+                            
+                        </Grid>                     
                     </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
         </StackLayout>
 
     </ContentPage.Content>

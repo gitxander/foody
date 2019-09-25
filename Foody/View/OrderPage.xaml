@@ -1,17 +1,19 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:Foody.ViewModel"
-             x:Class="Foody.OrderPage">
+             x:Class="Foody.OrderPage" Title="Orders">
 
     <ContentPage.ToolbarItems>
-        <ToolbarItem Text="o" Clicked="ViewCart" />
+        <ToolbarItem Name="Cart" Text="Orders" Icon="cart.png" Priority="0" Order="Primary" Clicked="ViewCart" />
     </ContentPage.ToolbarItems>
 
     <ContentPage.Content>
 
+        <ScrollView>
         <StackLayout>
+            
 
-            <!--<Image Source="{local:ImageResource Foody.Resources.images.big-burger-cropped.jpg}" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Aspect="AspectFill"/>-->
+            <Image Source="{local:ImageResource Foody.Resources.images.big-burger-cropped.jpg}" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Aspect="AspectFill"/>
 
             <CollectionView x:Name="ListView" ItemsSource= "{Binding OrderList}" SelectionMode="Single" SelectionChanged="OnListViewItemSelected">
 
@@ -37,6 +39,7 @@
             </CollectionView>
 
         </StackLayout>
+            </ScrollView>
 
     </ContentPage.Content>
 </ContentPage>

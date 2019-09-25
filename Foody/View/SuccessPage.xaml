@@ -6,15 +6,10 @@
     <ContentPage.Content>
         <ScrollView>
             <StackLayout>
-                <StackLayout BackgroundColor="{StaticResource BG_Color}"  Padding="10">
-                    <Label Text="Check Out" 
-                       TextColor="White"  
-                       HorizontalOptions="Center" 
-                       FontSize="Title" 
-                       FontAttributes="Bold" />
-                </StackLayout>
+                
                 <StackLayout Padding="10">
-                    <Label Text="Success!" FontAttributes="Bold" FontSize="Large" Margin="0,20,0,0"/>
+                    <!-- MARGIN = LEFT, TOP, RIGHT, BOTTOM -->
+                    <Label Text="Checkout Success!" FontAttributes="Bold" FontSize="Title" Margin="75,200,0,75"/>
                     
 
                     <StackLayout Orientation="Horizontal" HorizontalOptions="Center">

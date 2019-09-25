@@ -1,18 +1,11 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:Foody.ViewModel"
-             x:Class="Foody.CheckoutPage">
+             x:Class="Foody.CheckoutPage" Title="Checkout">
 
     <ContentPage.Content>
         <ScrollView>
             <StackLayout>
-                <StackLayout BackgroundColor="{StaticResource BG_Color}"  Padding="10">
-                    <Label Text="Check Out" 
-                       TextColor="White"  
-                       HorizontalOptions="Center" 
-                       FontSize="Title" 
-                       FontAttributes="Bold" />
-                </StackLayout>
                 <StackLayout Padding="10">
                     <Label Text="Card no :" FontAttributes="Bold" FontSize="Large" Margin="0,20,0,0"/>
                     <Entry Placeholder="Enter card no" x:Name="u_Email"/>
