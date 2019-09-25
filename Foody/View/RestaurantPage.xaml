@@ -4,9 +4,6 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     x:Class="Foody.RestaurantPage"
     xmlns:local="clr-namespace:Foody.ViewModel">
-    <ContentPage.ToolbarItems>
-        <ToolbarItem Text="+" Clicked="AddFoodToCart" />
-    </ContentPage.ToolbarItems>
     <ContentPage.Content>
         <StackLayout Orientation="Vertical">   
         <StackLayout.BindingContext>

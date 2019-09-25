@@ -9,7 +9,7 @@
         <StackLayout.BindingContext>
             <local:FoodDetailsViewModel/>
         </StackLayout.BindingContext>
-            <CollectionView x:Name="FoodDetailsView" ItemsSource= "{Binding FoodItems}">
+            <CollectionView x:Name="FoodDetailsView" ItemsSource= "{Binding FoodItems}" SelectionMode="Single" SelectionChanged="OnListViewItemSelected">
             <CollectionView.ItemTemplate>   
                 <DataTemplate>
                    <Grid Padding="10">
@@ -19,13 +19,16 @@
                             <RowDefinition Height="50" />
                         </Grid.RowDefinitions>
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="2*" />
+                            <ColumnDefinition Width="6*" />
                             <ColumnDefinition Width="*" />
                             <ColumnDefinition Width="*" />
                         </Grid.ColumnDefinitions>
-                        <Image Grid.Row="0" Grid.ColumnSpan="3" Source="{Binding Image}" HeightRequest="125" Aspect="AspectFill"/>
+                        <Image Grid.Row="0" Grid.ColumnSpan="4" Source="{Binding Image}" HeightRequest="125" Aspect="AspectFill"/>
                         <Label Grid.Row="1" Grid.Column="0" Text="{Binding Name}" FontAttributes="Bold"></Label>
+                        <Label Grid.Row="1" Grid.Column="1" Text="$"></Label>    
+                        <Label Grid.Row="1" Grid.Column="1" Text="{Binding Price}" HorizontalTextAlignment="Center"></Label>
                         <Label Grid.Row="2" Grid.Column="0" Text="{Binding Description}"></Label>
+                        <Button Grid.Row="2" Grid.Column="2" Text="+"></Button>
                     </Grid>                            
                  </DataTemplate>
             </CollectionView.ItemTemplate>
